@@ -17,3 +17,5 @@
 include:
   - board: nrfmicro_13
     shield: alpha28
+  - board: nrfmicro_13
+    shield: settings_reset
