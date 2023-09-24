@@ -1,2 +1,5 @@
+if SHIELD_ALPHA28
 config ZMK_KEYBOARD_NAME
     default "alpha28"
+endif
+
