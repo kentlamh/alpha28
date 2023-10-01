@@ -25,6 +25,12 @@
     keymap {
         compatible = "zmk,keymap";
 
+        sensors {
+            compatible = "zmk,keymap-sensors";
+            sensors = <&left_encoder &right_encoder>;
+            triggers-per-rotation = <20>;
+        };
+
         default_layer {
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             bindings = <
