@@ -3,8 +3,10 @@ id: alpha28
 name: alpha28
 type: shield
 url: https://github.com/dongocduy/alpha28.git
-requires: [pro_micro]
+requires: 
+  - pro_micro
 features:
   - keys
-siblings:
   - alpha28
+  - encoder
+  - underglow
