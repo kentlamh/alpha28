@@ -7,12 +7,18 @@
         zmk,matrix_transform = &default_transform;
     };
 
-    encoder_1: encoder_1 {
+    left_encoder: encoder_left {
         compatible = "alps,ec11";
-        label = "Encoder 1";
+        label = "LEFT_ENCODER";
         a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <20>;
     };
 
     default_transform: keymap_transform_0 {
@@ -25,11 +31,6 @@
             RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6) RC(1,7) RC(1,8) RC(1,9)
                     RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,5) RC(2,7) RC(2,8) RC(2,9)
         >;
-    };
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1>;
-        triggers-per-rotation = <20>;
     };
 
     kscan0: kscan_0 {
