@@ -74,7 +74,7 @@
 };
 
 // Set up the QDEC hardware based driver and give it the same label as the deleted node.
-encoder: &qdec0 {
+&qdec0 {
     status = "okay";
     led-pre = <0>;
     steps = <80>;
