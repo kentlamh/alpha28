@@ -63,7 +63,7 @@
         adjust_layer {
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
             bindings = <
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &rgb_ug  RGB_TOG  &rgb_ug  RGB_EFF &rgb_ug  RGB_BRI &rgb_ug  RGB_BRD  &kp P
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &rgb_ug  RGB_TOG  &rgb_ug  RGB_EFF &rgb_ug  RGB_BRI &rgb_ug  RGB_EFF  &rgb_ug RGB_OFF
                 &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &kp F         &kp G             &kp H  &kp J  &kp K  &kp L  &kp RET
                 &sys_reset    &bootloader   &kp C         &kp V         &kp SPACE         &kp B  &kp N  &kp M
             >;
