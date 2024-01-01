@@ -15,6 +15,9 @@
     release-after-ms = <5000>;
 };
 
+&led_strip {
+    chain-length = <8>;
+};
 
 &kscan0 {
     debounce-press-ms = <30>;
