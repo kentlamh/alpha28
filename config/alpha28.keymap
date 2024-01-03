@@ -62,9 +62,9 @@
         num_mod {
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
             bindings = <
-&kp N1        &kp N2        &kp N3  &kp N4  &kp N5        &kp N6     &kp N7         &kp N8            &kp N9     &kp N0
-&kp CAPSLOCK  &kp S         &kp D   &kp F   &kp G         &kp H      &kp SEMICOLON  &kp SINGLE_QUOTE  &kp MINUS  &kp EQUAL
-              &kp LEFT_GUI  &kp X   &kp C   &kp LEFT_WIN  &kp SPACE  &kp COMMA      &kp DOT           &kp SLASH
+&kp N1        &kp N2        &kp N3  &kp N4  &kp N5         &kp N6  &kp N7         &kp N8            &kp N9     &kp N0
+&kp CAPSLOCK  &kp S         &kp D   &kp F   &kp G          &kp H   &kp SEMICOLON  &kp SINGLE_QUOTE  &kp MINUS  &kp EQUAL
+              &kp LEFT_GUI  &kp X   &kp C   &kp BACKSPACE  &trans  &kp COMMA      &kp DOT           &kp SLASH
             >;
 
             label = "num_mod";
