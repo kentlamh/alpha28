@@ -43,6 +43,79 @@
             flavor = "balanced";
             hold-trigger-key-positions = <24>;
         };
+
+        td_paste: td_paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PASTE";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_ALT V>, <&paste>;
+
+            tapping-term-ms = <150>;
+        };
+
+        td_cut: td_cut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CUT";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT X>, <&cut>;
+
+            tapping-term-ms = <150>;
+        };
+
+        td_copy: td_copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COPY";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&none>, <&copy>;
+        };
+    };
+
+    macros {
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "PASTE";
+            tap-ms = <150>;
+        };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "CUT";
+            tap-ms = <150>;
+        };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "COPY";
+            tap-ms = <150>;
+        };
     };
 
     keymap {
@@ -51,9 +124,9 @@
         default {
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
             bindings = <
-&kp Q  &kp W  &kp E             &kp R  &kp T  &kp Y        &kp U  &kp I  &kp O  &kp P
-&kp A  &kp S  &kp D             &kp F  &kp G  &kp H        &kp J  &kp K  &kp L  &lt 2 ENTER
-       &kp Z  &ht LEFT_SHIFT X  &kp C  &kp V  &lt 1 SPACE  &kp B  &kp N  &kp M
+&kp Q  &kp W        &kp E    &kp R     &kp T      &kp Y        &kp U  &kp I  &kp O  &kp P
+&kp A  &kp S        &kp D    &kp F     &kp G      &kp H        &kp J  &kp K  &kp L  &lt 2 ENTER
+       &ht LCTRL Z  &td_cut  &td_copy  &td_paste  &lt 1 SPACE  &kp B  &kp N  &kp M
             >;
 
             label = "Alpha";
