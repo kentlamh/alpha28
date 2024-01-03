@@ -9,9 +9,6 @@
 #define FN2 2
 #define FN3 3
 
-#define HYPER(key) LS(LC(LA(LG(key))))
-#define MEH(key)   LS(LC(LA(key)))
-
 &sl {
     release-after-ms = <5000>;
 };
@@ -29,7 +26,7 @@
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <20>;
+        triggers-per-rotation = <10>;
     };
 
     behaviors {
