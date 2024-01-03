@@ -74,7 +74,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_UNDO";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT Z>, <&undo>;
+            bindings = <&mt LCTRL Z>, <&undo>;
 
             tapping-term-ms = <300>;
         };
