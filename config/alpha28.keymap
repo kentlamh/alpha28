@@ -319,7 +319,7 @@
         compatible = "zmk,keymap";
 
         default {
-            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
             bindings = <
 &td_esc    &kp W     &kp E    &kp R     &kp T      &kp Y        &kp U  &kp I  &kp O  &kp P
 &mm_a_tab  &kp S     &kp D    &kp F     &kp G      &kp H        &kp J  &kp K  &kp L  &lt 2 ENTER
@@ -332,9 +332,9 @@
         num_mod {
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
             bindings = <
-&td_1         &td_2         &td_3       &td_4       &td_5          &td_6          &td_7          &td_8    &td_9      &td_0
-&kp CAPSLOCK  &td_pipe      &kp HOME    &kp END     &kp PAGE_UP    &kp PAGE_DOWN  &td_semicolon  &td_sqt  &td_minus  &td_plus
-              &kp LEFT_GUI  &kp INSERT  &kp DELETE  &kp BACKSPACE  &trans         &td_comma      &td_dot  &td_pipe
+&td_1    &td_2         &td_3       &td_4       &td_5          &td_6          &td_7          &td_8    &td_9      &td_0
+&kp TAB  &td_pipe      &kp HOME    &kp END     &kp PAGE_UP    &kp PAGE_DOWN  &td_semicolon  &td_sqt  &td_minus  &td_plus
+         &kp LEFT_GUI  &kp INSERT  &kp DELETE  &kp BACKSPACE  &trans         &td_comma      &td_dot  &td_pipe
             >;
 
             label = "num_mod";
