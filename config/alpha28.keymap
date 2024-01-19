@@ -334,7 +334,7 @@
             bindings = <
 &td_1    &td_2         &td_3       &td_4       &td_5          &td_6          &td_7          &td_8    &td_9      &td_0
 &kp TAB  &td_pipe      &kp HOME    &kp END     &kp PAGE_UP    &kp PAGE_DOWN  &td_semicolon  &td_sqt  &td_minus  &td_plus
-         &kp LEFT_GUI  &kp INSERT  &kp DELETE  &kp BACKSPACE  &trans         &td_comma      &td_dot  &td_pipe
+         &kp LEFT_GUI  &kp INSERT  &kp DELETE  &kp BACKSPACE  &trans         &td_comma      &td_dot  &td_slash
             >;
 
             label = "num_mod";
